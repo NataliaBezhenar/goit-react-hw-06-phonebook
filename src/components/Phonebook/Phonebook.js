@@ -1,20 +1,10 @@
-import React from "react";
-import Phonebook from "./components/Phonebook";
-
-const App = () => {
-  return <Phonebook />;
-};
-
-export default App;
-
-/*
 import React, { useEffect, useState } from "react";
 import shortid from "shortid";
 
-import "./App.css";
-import ContactForm from "./components/ContactForm";
-import ContactList from "./components/ContactList";
-import Filter from "./components/Filter";
+import "./Phonebook.css";
+import ContactForm from "../ContactForm";
+import ContactList from "../ContactList";
+import Filter from "../Filter";
 
 export default function App() {
   const [contacts, setContacts] = useState([]);
@@ -53,4 +43,3 @@ export default function App() {
     </div>
   );
 }
-*/
