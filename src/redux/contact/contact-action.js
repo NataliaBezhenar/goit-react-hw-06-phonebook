@@ -2,7 +2,7 @@ import { createAction } from "@reduxjs/toolkit";
 import shortid from "shortid";
 import types from "./contact-types";
 
-const addContact = createAction(types.ADD, (name, number) => ({
+export const addContact = createAction(types.ADD, (name, number) => ({
   payload: {
     id: shortid.generate(),
     name,
@@ -10,6 +10,4 @@ const addContact = createAction(types.ADD, (name, number) => ({
   },
 }));
 
-const deleteContact = createAction(types.DELETE);
-
-export { addContact, deleteContact };
+export const deleteContact = createAction(types.DELETE);

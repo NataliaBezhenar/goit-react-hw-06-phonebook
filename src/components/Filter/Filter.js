@@ -1,22 +1,22 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "./Filter.css";
-import PropTypes from "prop-types";
+import { filter } from "../../redux/filter/filter-actions";
 
-const Filter = ({ value, onChange }) => (
-  <label className="Filter__label">
-    Find contacts by name:{" "}
-    <input
-      type="text"
-      className="Filter__input"
-      value={value}
-      onChange={onChange}
-    />
-  </label>
-);
-
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+const Filter = () => {
+  const value = useSelector((state) => state.filter);
+  const dispatch = useDispatch();
+  return (
+    <label className="Filter__label">
+      Find contacts by name:{" "}
+      <input
+        type="text"
+        className="Filter__input"
+        value={value}
+        onChange={(e) => dispatch(filter(e.currentTarget.value))}
+      />
+    </label>
+  );
 };
 
 export default Filter;
