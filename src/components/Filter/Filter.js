@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Filter.css";
 import { filter } from "../../redux/filter/filter-actions";

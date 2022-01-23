@@ -7,7 +7,6 @@ const ContactList = () => {
   const filter = useSelector((state) => state.filter);
 
   const filteredContacts = () => {
-    console.log(contacts);
     return contacts.filter((contact) =>
       contact.name.toLowerCase().includes(filter)
     );
@@ -17,7 +16,6 @@ const ContactList = () => {
   return (
     <ul className="ContactList">
       {filteredContacts().map(({ id, name, number }) => {
-        console.log("mapping contacts");
         return (
           <li className="ContactList__item" key={id}>
             {name}: {number}
