@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 
 import "./Phonebook.css";
 import ContactForm from "../ContactForm";
@@ -23,9 +23,8 @@ export default function Phonebook() {
       <h1>Phonebook</h1>
       <ContactForm />
       <h2>Contacts </h2>
-
+      <Filter />
       <ContactList />
     </div>
   );
 }
-// <Filter value={filter} />
